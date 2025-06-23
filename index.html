@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Pizza Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="space-background">
+        <div class="stars"></div>
+        <div class="floating-planets">
+            <div class="planet planet-1"></div>
+            <div class="planet planet-2"></div>
+            <div class="planet planet-3"></div>
+        </div>
+        <div class="pizza-doodles">
+            <div class="pizza pizza-1">🍕</div>
+            <div class="pizza pizza-2">🍕</div>
+            <div class="pizza pizza-3">🍕</div>
+            <div class="pizza pizza-4">🍕</div>
+        </div>
+    </div>
+
+    <div class="carousel-container">
+        <div class="carousel-wrapper">
+            <div class="carousel-slides">
+                <!-- Slide 1: Basic Info -->
+                <div class="slide active" id="slide-1">
+                    <div class="slide-content">
+                        <div class="intro-section">
+                            <div class="avatar-container">
+                                <div class="avatar">
+                                    <i class="fas fa-user-astronaut"></i>
+                                </div>
+                            </div>
+                            <h1 class="name">John Space Developer</h1>
+                            <p class="title">Full Stack Space Pizza Engineer</p>
+                            <p class="bio">Delivering code across the galaxy, one commit at a time. Specializing in interplanetary web solutions and cosmic user experiences.</p>
+                            
+                            <div class="social-icons">
+                                <a href="https://github.com" class="social-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://linkedin.com" class="social-link" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="mailto:contact@example.com" class="social-link">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </div>
+                            
+                            <button class="download-btn" onclick="downloadResume()">
+                                <i class="fas fa-download"></i>
+                                Download Resume
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Skills -->
+                <div class="slide" id="slide-2">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Skills & Technologies</h2>
+                        
+                        <div class="skills-section">
+                            <div class="skill-category">
+                                <h3>Web Development</h3>
+                                <div class="skills-grid">
+                                    <div class="skill-item">
+                                        <i class="fab fa-html5"></i>
+                                        <span>HTML5</span>
+                                    </div>
+                                    <div class="skill-item">
+                                        <i class="fab fa-css3-alt"></i>
+                                        <span>CSS3</span>
+                                    </div>
+                                    <div class="skill-item">
+                                        <i class="fab fa-js-square"></i>
+                                        <span>JavaScript</span>
+                                    </div>
+                                    <div class="skill-item">
+                                        <i class="fab fa-react"></i>
+                                        <span>React</span>
+                                    </div>
+                                    <div class="skill-item">
+                                        <i class="fab fa-node-js"></i>
+                                        <span>Node.js</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill-category">
+                                <h3>Game Development</h3>
+                                <div class="skills-grid">
+                                    <div class="skill-item">
+                                        <i class="fas fa-gamepad"></i>
+                                        <span>Unity</span>
+                                    </div>
+                                    <div class="skill-item">
+                                        <i class="fas fa-cube"></i>
+                                        <span>UE5</span>
+                                    </div>
+                                    <div class="skill-item">
+                                        <i class="fas fa-code"></i>
+                                        <span>SFML</span>
+                                    </div>
+                                    <div class="skill-item">
+                                        <i class="fas fa-vector-square"></i>
+                                        <span>OpenGL</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill-category">
+                                <h3>Backend Development</h3>
+                                <div class="skills-grid">
+                                    <div class="skill-item">
+                                        <i class="fab fa-python"></i>
+                                        <span>Python</span>
+                                    </div>
+                                    <div class="skill-item">
+                                        <i class="fas fa-database"></i>
+                                        <span>MongoDB</span>
+                                    </div>
+                                    <div class="skill-item">
+                                        <i class="fas fa-server"></i>
+                                        <span>Express</span>
+                                    </div>
+                                    <div class="skill-item">
+                                        <i class="fas fa-cloud"></i>
+                                        <span>AWS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Projects -->
+                <div class="slide" id="slide-3">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Projects Portfolio</h2>
+                        
+                        <div class="projects-section">
+                            <div class="project-category">
+                                <h3>Web Development</h3>
+                                <div class="projects-grid">
+                                    <div class="project-card">
+                                        <div class="project-image">
+                                            <i class="fas fa-globe"></i>
+                                        </div>
+                                        <div class="project-info">
+                                            <h4>Space Pizza Delivery</h4>
+                                            <p>Full-stack e-commerce platform for interplanetary pizza delivery with real-time tracking.</p>
+                                            <div class="project-tech">
+                                                <span>React</span>
+                                                <span>Node.js</span>
+                                                <span>MongoDB</span>
+                                            </div>
+                                            <div class="project-links">
+                                                <a href="#" class="project-link">
+                                                    <i class="fab fa-github"></i>
+                                                </a>
+                                                <a href="#" class="project-link">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="project-card">
+                                        <div class="project-image">
+                                            <i class="fas fa-rocket"></i>
+                                        </div>
+                                        <div class="project-info">
+                                            <h4>Cosmic Portfolio</h4>
+                                            <p>Interactive space-themed portfolio with 3D animations and stellar navigation.</p>
+                                            <div class="project-tech">
+                                                <span>Three.js</span>
+                                                <span>CSS3</span>
+                                                <span>JavaScript</span>
+                                            </div>
+                                            <div class="project-links">
+                                                <a href="#" class="project-link">
+                                                    <i class="fab fa-github"></i>
+                                                </a>
+                                                <a href="#" class="project-link">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-category">
+                                <h3>Game Development</h3>
+                                <div class="projects-grid">
+                                    <div class="project-card">
+                                        <div class="project-image">
+                                            <i class="fas fa-gamepad"></i>
+                                        </div>
+                                        <div class="project-info">
+                                            <h4>Galaxy Defender</h4>
+                                            <p>2D space shooter game with procedural enemy generation and power-up systems.</p>
+                                            <div class="project-tech">
+                                                <span>Unity</span>
+                                                <span>C#</span>
+                                                <span>Photon</span>
+                                            </div>
+                                            <div class="project-links">
+                                                <a href="#" class="project-link">
+                                                    <i class="fab fa-github"></i>
+                                                </a>
+                                                <a href="#" class="project-link">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="project-card">
+                                        <div class="project-image">
+                                            <i class="fas fa-cube"></i>
+                                        </div>
+                                        <div class="project-info">
+                                            <h4>Pizza Planet Simulator</h4>
+                                            <p>3D simulation game where players manage pizza production on alien worlds.</p>
+                                            <div class="project-tech">
+                                                <span>UE5</span>
+                                                <span>Blueprint</span>
+                                                <span>C++</span>
+                                            </div>
+                                            <div class="project-links">
+                                                <a href="#" class="project-link">
+                                                    <i class="fab fa-github"></i>
+                                                </a>
+                                                <a href="#" class="project-link">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="carousel-nav">
+            <button class="nav-btn prev-btn" onclick="previousSlide()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="slide-indicators">
+                <span class="indicator active" onclick="goToSlide(0)"></span>
+                <span class="indicator" onclick="goToSlide(1)"></span>
+                <span class="indicator" onclick="goToSlide(2)"></span>
+            </div>
+            <button class="nav-btn next-btn" onclick="nextSlide()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
