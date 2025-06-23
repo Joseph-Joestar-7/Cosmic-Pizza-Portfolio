@@ -1,6 +1,6 @@
 
 let currentSlide = 0;
-const totalSlides = 3;
+const totalSlides = 4;
 
 // Initialize carousel
 function initCarousel() {
@@ -350,3 +350,16 @@ document.addEventListener('keydown', (e) => {
         konami = [];
     }
 });
+
+function toggleEducation(id) {
+    const card = document.getElementById(id);
+
+    const allCards = document.querySelectorAll('.education-item');
+    allCards.forEach(item => {
+        if (item !== card) {
+            item.classList.remove('expanded');
+        }
+    });
+
+    card.classList.toggle('expanded');
+}

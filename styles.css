@@ -187,13 +187,13 @@ body {
 
 .carousel-slides {
     display: flex;
-    width: 300%;
+    width: 400%;
     height: 100%;
     transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .slide {
-    width: 33.333%;
+    width: 25%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -506,6 +506,100 @@ body {
     color: #1e90ff;
     transform: scale(1.2);
 }
+
+/* Education Section */
+.education-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main card layout */
+.education-item {
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(220, 20, 60, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    overflow: hidden;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.education-item.expanded {
+    width: 95%;
+    max-width: 1000px;
+    justify-content: flex-start;
+}
+
+/* Header part */
+.education-header {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    transition: all 0.5s ease;
+}
+
+.education-main h3 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.5rem;
+    color: #1e90ff;
+}
+
+.education-main .duration,
+.education-main .degree {
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+/* Toggle icon */
+.education-toggle {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #ccc;
+    transition: transform 0.4s ease;
+}
+
+.education-item.expanded .education-toggle {
+    transform: rotate(90deg);
+}
+
+/* Details shown on expansion */
+.education-details {
+    flex-grow: 1;
+    padding: 20px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.education-item.expanded .education-details {
+    display: block;
+    opacity: 1;
+}
+
+.detail-card {
+    background: rgba(30, 144, 255, 0.1);
+    border: 1px solid rgba(30, 144, 255, 0.3);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.detail-icon i {
+    font-size: 1.5rem;
+    color: #1e90ff;
+}
+
 
 /* Navigation Styles */
 .carousel-nav {
