@@ -97,8 +97,8 @@ function updateCarousel() {
 function downloadResume() {
     // Create a mock PDF download
     const link = document.createElement('a');
-    link.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent('John Space Developer - Resume\n\nThis is a placeholder for the actual resume file.');
-    link.download = 'John_Space_Developer_Resume.txt';
+    link.href = 'resume/Ritaban_Chaudhuri_Resume.pdf';  
+    link.download = 'Ritaban_Chaudhuri_Resume.pdf'; 
     link.style.display = 'none';
     document.body.appendChild(link);
     link.click();
