@@ -166,6 +166,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 5px;
 }
 
 .carousel-wrapper {
@@ -177,7 +178,7 @@ body {
     overflow: hidden;
     border-radius: 20px;
     background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
     border: 2px solid rgba(220, 20, 60, 0.3);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
@@ -258,7 +259,7 @@ body {
     font-size: 3rem;
     font-weight: 900;
     margin-bottom: 10px;
-    background: linear-gradient(45deg, #dc143c, #1e90ff);
+    background: linear-gradient(-60deg, #e4254b, #05186c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -292,7 +293,8 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: linear-gradient(45deg, #dc143c, #1e90ff);
+    /* background: linear-gradient(45deg, #dc143c, #1e90ff); */
+    background: #000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -338,7 +340,7 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 40px;
-    background: linear-gradient(45deg, #dc143c, #1e90ff);
+    background: linear-gradient(45deg, #d60932, #00054a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -372,21 +374,28 @@ body {
     text-align: center;
     transition: all 0.3s ease;
     cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .skill-item:hover {
     background: rgba(30, 144, 255, 0.2);
-    border-color: #1e90ff;
+    border-color: #351eff;
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(30, 144, 255, 0.3);
 }
 
-.skill-item i {
+.skill-item i,
+.skill-item img {
     font-size: 2rem;
     color: #1e90ff;
     margin-bottom: 10px;
     display: block;
 }
+
 
 .skill-item span {
     font-weight: 600;
@@ -415,7 +424,7 @@ body {
 }
 
 .project-card {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.221);
     border: 2px solid rgba(220, 20, 60, 0.3);
     border-radius: 15px;
     overflow: hidden;
@@ -503,7 +512,8 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: linear-gradient(45deg, #dc143c, #1e90ff);
+    /* background: linear-gradient(45deg, #ad0023, #ccc8c8);  */
+    background-color: #171314;
     border: none;
     color: #fff;
     font-size: 1.2rem;
