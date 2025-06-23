@@ -263,13 +263,17 @@ function initSocialEffects() {
                     let message = '';
                     if (icon.classList.contains('fa-github')) {
                         message = 'Opening GitHub profile... 🚀';
-                        setTimeout(() => window.open('https://github.com', '_blank'), 500);
+                        setTimeout(() => window.open('https://github.com/Joseph-Joestar-7', '_blank'), 500);
                     } else if (icon.classList.contains('fa-linkedin')) {
                         message = 'Opening LinkedIn profile... 💼';
-                        setTimeout(() => window.open('https://linkedin.com', '_blank'), 500);
+                        setTimeout(() => window.open('https://www.linkedin.com/in/ritaban-chaudhuri/', '_blank'), 500);
                     } else if (icon.classList.contains('fa-envelope')) {
                         message = 'Opening email client... 📧';
-                        setTimeout(() => window.location.href = 'mailto:contact@example.com', 500);
+                        setTimeout(() => window.location.href = 'mailto:ritabanchaudhuri@gmail.com', 500);
+                    }
+                    else if (icon.classList.contains('itch')) {
+                        message = 'Opening itch.io... 🎮';
+                        setTimeout(() => window.open('https://rit7.itch.io/', '_blank'), 500);
                     }
                     
                     showToast(message);
