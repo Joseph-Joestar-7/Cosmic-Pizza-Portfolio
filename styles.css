@@ -536,6 +536,22 @@ body {
     width: 95%;
     max-width: 1000px;
     justify-content: flex-start;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.education-item.expanded::-webkit-scrollbar {
+  width: 8px;
+}
+
+.education-item.expanded::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.education-item.expanded::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #dc0630, #313030);
+  border-radius: 6px;
 }
 
 /* Header part */
@@ -586,13 +602,18 @@ body {
 }
 
 .detail-card {
-    background: rgba(30, 144, 255, 0.1);
-    border: 1px solid rgba(30, 144, 255, 0.3);
-    border-radius: 12px;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  max-height: 300px;
+  width: 220px; /* or use min-width if horizontal scroll is needed */
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  gap: 12px;
+  overflow: hidden;
 }
 
 .detail-icon i {
@@ -600,6 +621,38 @@ body {
     color: #1e90ff;
 }
 
+.detail-card.horizontal {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.detail-card.horizontal .detail-icon {
+    flex-shrink: 0;
+}
+
+.detail-image {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 12px;
+    margin: 10px auto;
+    display: block;
+}
+
+.detail-card.horizontal .detail-image {
+    max-width: 80px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.detail-card .text {
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
 
 /* Navigation Styles */
 .carousel-nav {
