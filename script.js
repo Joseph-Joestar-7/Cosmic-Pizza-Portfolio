@@ -275,7 +275,10 @@ function initSocialEffects() {
                         message = 'Opening itch.io... 🎮';
                         setTimeout(() => window.open('https://rit7.itch.io/', '_blank'), 500);
                     }
-                    
+                    else if (icon.classList.contains('fa-youtube')) {
+                        message = 'Opening YouTube... ▶️';
+                        setTimeout(() => window.open('https://www.youtube.com/@Lack_Of_Enemies', '_blank'), 500);
+                    }
                     showToast(message);
                 }, 100);
             }, 100);
