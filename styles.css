@@ -222,7 +222,7 @@ body {
 .slide-content {
     overflow-y: auto;
     max-height: 100%;
-    padding-right: 10px; /* for scrollbar */
+    padding-right: 50px; /* for scrollbar */
     padding-bottom: 60px;
 }
 
