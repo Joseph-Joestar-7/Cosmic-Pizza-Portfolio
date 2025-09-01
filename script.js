@@ -1,5 +1,5 @@
 
-let currentSlide = 3;
+let currentSlide = 0;
 const totalSlides = 5;
 
 // Initialize carousel
