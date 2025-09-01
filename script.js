@@ -1,6 +1,6 @@
 
-let currentSlide = 0;
-const totalSlides = 4;
+let currentSlide = 3;
+const totalSlides = 5;
 
 // Initialize carousel
 function initCarousel() {
@@ -71,6 +71,7 @@ function updateCarousel() {
     // Move slides
     const translateX = -currentSlide * (100 / totalSlides);
     slidesContainer.style.transform = `translateX(${translateX}%)`;
+    
     
     // Update indicators
     indicators.forEach((indicator, index) => {
