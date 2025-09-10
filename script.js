@@ -274,7 +274,7 @@ function initSocialEffects() {
                     }
                     else if (icon.classList.contains('itch')) {
                         message = 'Opening itch.io... 🎮';
-                        setTimeout(() => window.open('https://rit7.itch.io/', '_blank'), 500);
+                        setTimeout(() => window.open('https://rono7.itch.io/', '_blank'), 500);
                     }
                     else if (icon.classList.contains('fa-youtube')) {
                         message = 'Opening YouTube... ▶️';
