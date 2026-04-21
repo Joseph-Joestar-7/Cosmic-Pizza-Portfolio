@@ -292,12 +292,12 @@ body {
     margin-bottom: 40px;
 }
 
-.social-link {
+/* .social-link {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     /* background: linear-gradient(45deg, #dc143c, #1e90ff); */
-    background: #000;
+    /* background: #000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -311,7 +311,136 @@ body {
 .social-link:hover {
     transform: translateY(-5px) scale(1.1);
     box-shadow: 0 10px 25px rgba(220, 20, 60, 0.5);
+}  */
+
+/* experimental */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
 }
+
+.social-link {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(220, 20, 60, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #f21b3b;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 5px 15px rgba(220, 20, 60, 0.18);
+  overflow: visible;
+}
+
+.social-link i {
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-5px) scale(1.08);
+  border-color: rgba(220, 20, 60, 0.45);
+  box-shadow:
+    0 0 0 1px rgba(220, 20, 60, 0.20),
+    0 0 20px rgba(220, 20, 60, 0.28),
+    0 10px 30px rgba(220, 20, 60, 0.20);
+}
+
+.social-link:hover i {
+  transform: scale(1.08);
+  color: #ff2f4f;
+}
+
+.social-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 16px);
+  transform: translateX(-50%) translateY(10px) scale(0.96);
+  width: 210px;
+  padding: 16px 18px 14px;
+  border-radius: 22px;
+  background: rgba(10, 10, 10, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.55),
+    0 0 40px rgba(220, 20, 60, 0.18);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  text-align: left;
+  z-index: 10;
+}
+
+.social-link:hover .social-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.social-tooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 16px;
+  height: 16px;
+  background: rgba(10, 10, 10, 0.88);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.tooltip-title {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  font-weight: 800;
+  color: #dc143c;
+  margin-bottom: 8px;
+}
+
+.tooltip-handle {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #d7d7d7;
+  margin-bottom: 8px;
+}
+
+.tooltip-desc {
+  display: block;
+  font-size: 13px;
+  color: rgba(220, 220, 220, 0.65);
+  line-height: 1.35;
+}
+
+
+
+/* optional: makes the icon itself feel "selected" on hover */
+.social-link::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  border: 1px solid rgba(220, 20, 60, 0);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  pointer-events: none;
+}
+
+.social-link:hover::before {
+  border-color: rgba(220, 20, 60, 0.35);
+  box-shadow: 0 0 28px rgba(220, 20, 60, 0.12);
+}
+/* experimental */
 
 .download-btn {
     background: linear-gradient(45deg, #dc143c, #b91c3c);

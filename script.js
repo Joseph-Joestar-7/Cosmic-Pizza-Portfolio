@@ -278,7 +278,7 @@ function initSocialEffects() {
                     }
                     else if (icon.classList.contains('fa-youtube')) {
                         message = 'Opening YouTube... ▶️';
-                        setTimeout(() => window.open('https://www.youtube.com/@Lack_Of_Enemies', '_blank'), 500);
+                        setTimeout(() => window.open('https://www.youtube.com/@Rono_.rc7', '_blank'), 500);
                     }
                     showToast(message);
                 }, 100);
